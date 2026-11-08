@@ -66,7 +66,7 @@
                 <img src="/assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
-            <button class="btn flex-col h-full py-[20px] btn-primary btn-soft ">
+            <button onclick="showonly('sendmoney')" class="btn flex-col h-full py-[20px] btn-primary btn-soft ">
                 <img src="/assets/opt-3.png" alt="">
                 <p>Transfer Money</p>
             </button>
@@ -86,7 +86,7 @@
 
     </section>
 
-    <section id="add-money" class="w-11/12 mx-auto py-3 ">
+    <section id="add-money" class="w-11/12 mx-auto py-3 hidden ">
         <h2 class="text-xl mb-5 font-bold">
             Adde Money
         </h2>
@@ -155,10 +155,44 @@
         </div>
     </section>
 
+
+
+    <section id="sendmoney" class="w-11/12 mx-auto py-3 hidden">
+        <h2 class="text-xl mb-5 font-bold">
+            Transfer Money
+        </h2>
+        <div class="card bg-base-100 w-full   shadow  rounded-2xl">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <label class="label rounded-full font-bold text-neutral py-1">User Account Number</label>
+                    <input id="sendmoney-number" maxlength="11" minlength="11" type="text"
+                        class="input rounded-full bg-base-200 w-full" placeholder="Enter 11 digit number" />
+                    <br>
+
+                    <label class="label font-bold text-neutral py-1">Amount </label>
+                    <input id="sendmoney-amount" type="number" class="input rounded-full text-neutral bg-base-200  w-full"
+                        placeholder="Enter amount to transfer" />
+                    <br>
+
+                    <label class="label font-bold text-neutral py-1">Pin Number </label>
+                    <input id="sendmoney-pin" maxlength="4" minlength="4" type="text"
+                        class="input rounded-full text-neutral bg-base-200 w-full " placeholder="Enter 4 Digit Pin" />
+                        <br>
+
+                    <button id="sendmoney-btn" class="btn btn-primary mt-4 rounded-full w-full">Send Now</button>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+
+
+
     <section id="history"class =" w-11/12 mx-auto py-3 hidden ">
         <h2 class="text-xl  font-bold "> Transaction</h2>
         <div class="" id="history-container">
-            <div class="transation-card  p-5 bg-base-100">   
+            <div class="transation-card  p-5 bg-base-100"> 
+                no tranction  
             </div>
         </div>
     </section>
@@ -167,6 +201,7 @@
     <script src="/script/machin.js"></script>
     <script src="/script/addmoney.js"></script>
     <script src="script/cashout.js"></script>
+    <script src="/script/sendmoney.js"></script>
 </body>
 
 </html>

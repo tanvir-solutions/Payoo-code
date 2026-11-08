@@ -26,10 +26,14 @@ function showonly(id){
     const addmoney= document.getElementById("add-money");
     const cashout= document.getElementById("cashout");
     const history =document.getElementById("history");
+    const sendmoney =document.getElementById("sendmoney");
+    
+
     // console.log(`add money ${addmoney} , cashout ${cashout}`)
     //sobika haid koro
     addmoney.classList.add("hidden");
     cashout.classList.add("hidden");
+    sendmoney.classList.add("hidden")
     history.classList.add("hidden")
     
 
